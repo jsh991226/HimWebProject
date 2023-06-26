@@ -2,7 +2,7 @@
 [Unity를 활용한 온라인3D 타르코프라이크 게임](https://github.com/jsh991226/ProjectHIM) 의 웹 페이지 입니다
 
 ### Team INFO
-##### 팀장 / 개발 총괄 / 웹 백엔드 : 주승환 [ https://github.com/jsh991226 ]
+##### 서버,클라이언트 개발/웹 백엔드/디자인 : 주승환 [ https://github.com/jsh991226 ]
 ##### 웹 프론트엔드 : 김수용 [ https://github.com/suyong1213 ]
 ##### 클라이언트 개발 : 권성우 [ https://github.com/giteukham ]
 ##### 클라이언트 개발 : 이유진 [ https://github.com/Goonbam ]
