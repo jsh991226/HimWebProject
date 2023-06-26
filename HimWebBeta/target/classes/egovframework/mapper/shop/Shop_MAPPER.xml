@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="egovframework.shop.service.impl.ShopMapper">
+	
+
+	<resultMap id="shop" type="egovframework.shop.service.ShopVO">
+		<result property="id" column="id" />
+		<result property="itemdataname" column="itemdataname" />
+		<result property="itemname" column="itemname" />
+		<result property="itemdesc" column="itemdesc" />
+		<result property="cost" column="cost" />
+	</resultMap>
+	
+	<insert id="insertShop">
+		<![CDATA[
+			INSERT INTO shop 
+				( itemdataname
+				  , itemname
+				  , itemdesc
+				  , cost )
+			VALUES ( #{itemdataname}
+				  , #{itemname}
+				  , #{itemdesc}
+				  , #{cost} )
+		]]>
+	</insert>
+	
+	<update id="updateShop">
+		<![CDATA[
+			UPDATE shop
+			SET itemdataname=#{itemdataname}
+				, itemname=#{itemname}
+				, itemdesc=#{itemdesc}
+				, cost=#{cost} where id=#{id}
+			]]>
+	</update>
+	
+	<delete id="deleteShop">
+		<![CDATA[
+			DELETE FROM shop where id=#{id}
+			]]>
+	</delete>
+	
+	<select id="selectShop" resultMap="shop">
+		<![CDATA[
+			SELECT
+				itemdataname
+				, itemname
+				, itemdesc
+				, cost
+			FROM shop where id=#{id}
+			]]>
+	</select>
+	
+	<select id="selectShopList" parameterType="egovframework.shop.service.ShopVO" resultType="egovframework.shop.service.ShopVO">
+			SELECT
+								id
+								, itemdataname
+								, itemname
+								, itemdesc
+								, cost
+					FROM shop
+			
+	</select>	
+	<select id="selectShopListTotCnt" parameterType="egovframework.shop.service.ShopVO" resultType="int">
+			SELECT COUNT(*) totcnt
+			FROM shop
+			WHERE 1=1
+			<if test="searchKeyword != null and searchKeyword != ''">
+				<if test="searchCondition == 0">AND
+					id = #{searchKeyword}
+				</if>
+				<if test="searchCondition == 1">AND
+					itemdataname LIKE CONCAT('%',#{searchKeyword},'%')
+				</if>
+			</if>			
+	</select>
+
+</mapper>

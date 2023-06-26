@@ -1,0 +1,295 @@
+@font-face {
+  font-family: 'koverwatch';
+  src: url("../fonts/koverwatch.ttf") format('opentype');
+}
+
+/* 공통 */  
+  
+* {
+  padding: 0;
+  margin: 0 auto;
+  font-family: "Koverwatch";
+}
+
+img {
+  vertical-align: middle;
+}   
+body {
+  overflow-x: hidden;
+}
+a, li, ul, p{
+  text-decoration: none;
+  display: inline-block;
+  list-style: none;
+}
+div {
+  display: block;
+}
+
+
+/*  */
+
+.mypage_wrap{
+  width: 960px;
+  height: 650px;
+  background-color: rgb(252, 251, 251);
+  border-radius: 10px;
+  overflow: auto;
+  margin-top: 30px
+}
+                   /* myp_topcontent */
+
+.myp_topcontent {
+  width: 960px;
+  height: 60px;
+  overflow: auto;
+}
+
+.name_bar{ 
+  width: 930px;
+  height: 50px;
+  background-color: #6768ab;
+  border-radius: 5px;
+  box-shadow: 1px 1px;
+  margin-top: 5px;
+}
+
+.myp_nickname{
+  color: white;
+  font-size: 32px;
+  line-height: 50px;
+  margin-left: 15px;
+}
+
+
+                    /* myp_bottomcontent */
+
+.myp_bottomcontent {
+  width: 960px;
+  height: 60px;
+  display: flex;
+}
+
+.myp_info{
+  width: 450px;
+  height: 640px;
+  /* border-right: 2px dotted black; */
+}
+
+.myp_user_info {
+  width:450px;
+  height: 280px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.myp_user_face {
+  width: 450px;
+  height: 200px;
+  text-align: center;
+}
+
+.myp_user_rank{
+  width: 150px;
+  height: 300px;
+  float: right;
+  margin-right: 50px;
+  background-color: #fff;
+}
+
+.user_faceimg {
+  width: auto;
+  height: 200px;
+  text-align: center;
+}
+.exit_p{
+  font-size: 18px;
+  margin-top: 10px;
+}
+.rank_p{
+  color:gray;
+}
+
+.myp_moneyrank {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  background-color: rgb(211, 211, 211);
+  text-align: center;
+  margin-top: 10px;
+}
+
+.myp_exitrank {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  background-color: rgb(211, 211, 211);
+  text-align: center;
+  margin-top: 60px;
+}
+
+.money_exit_rankimg {
+  width: auto;
+  height: 90px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.myp_user_reg {
+  width:500px;
+  height: 300px;
+  float: left;
+  /* background-color: #6768ab; */
+}
+.dbwjwjdqh{
+  font-size: x-large;
+  color: white;
+}
+.myp_class1{
+  display: block;
+  float: left;
+  background-color: #fff;
+  width: 100px;
+  height: 60px;
+  line-height: 60px;
+  text-align: left;
+}
+.myp_class2{
+  display: block;
+  float: right;
+  background-color: #fff;
+  width: 100px;
+  height: 60px;
+  line-height: 60px;
+  text-align: right;
+  
+}
+
+.myp_class3{
+  display: block;
+  float: left;
+  background-color: #fff;
+  width: 150px;
+  height: 45px;
+  line-height: 45px;
+  text-align: left;
+}
+.myp_class4{
+  display: block;
+  float: right;
+  background-color: #fff;
+  width: 150px;
+  height: 45px;
+  line-height: 45px;
+  text-align: right;
+  
+}
+
+
+
+
+
+.myp_class_p {
+  margin-left: 5px;
+}
+
+.myp_class_p2 {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size:13px;
+  margin-right: 5px;
+}
+
+
+.reg_user_info {
+  width: 400px;
+  height: 35px;
+  background-color: #6768ab;
+  text-align: center;
+  line-height: 35px;
+  border-top-left-radius:10px;
+  border-top-right-radius:10px;
+  border-bottom: 1px dotted black;
+}
+.reg_user_reg{
+  width: 250px;
+  height: 300px;
+  background-color: #fff;
+  text-align: center;
+  float: left;
+  margin-left: 50px;
+}
+/*  myp_achieve  */
+
+.myp_achieve{
+  width: 450px;
+  height: 640px;
+  /* background-color: rgb(225, 193, 255); */
+}
+.reg_user_inventory{
+  margin-top: 5px;
+  width: 400px;
+  height: 35px;
+  background-color: #6768ab;
+  text-align: center;
+  line-height: 35px;
+  border-top-left-radius:10px;
+  border-top-right-radius:10px;
+  border-bottom: 1px dotted black;
+}
+
+.reg_user_reg2{
+  width: 400px;
+  height: 150px;
+  background-color: #fff;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.myp_product_card{
+  width: 400px;
+  height: 380px;
+  margin-top: 3px;
+  
+  
+  
+}
+.myp_weapon_img {
+    background-color: rgba(255, 255, 255, 0.739);
+    width: 97px;
+    height: auto;
+    /* border-radius: 10px; */
+    transition: all ease 0.5s 0s;
+    
+}
+.myp_product_img{
+  width: 97px;
+  height: 97px;
+  /* background-color: rgb(169, 169, 169); */
+  background-color: rgba(255, 255, 255, 0.739);
+
+  float: left;
+  border: 1px solid black;
+  margin-right: 1px;
+  margin-bottom: 1.5px;
+  box-shadow: 2px 2px 1px rgb(0, 0, 0, 0.2);
+  
+}
+.myp_product_img2{
+  width: 95px;
+  height: 95px;
+  background-color: rgb(83, 69, 52);
+  float: left;
+}

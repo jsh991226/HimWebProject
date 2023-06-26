@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="egovframework.user.service.impl.UserMapper">
+	
+
+	<resultMap id="user" type="egovframework.user.service.UserVO">
+		<result property="index" column="index" />
+		<result property="userid" column="userid" />
+		<result property="userpw" column="userpw" />
+		<result property="nickname" column="nickname" />
+		<result property="email" column="email" />
+		<result property="regdate" column="regdate" />
+		<result property="usertype" column="usertype" />
+		<result property="userclass" column="userclass" />
+		<result property="money" column="money" />
+		<result property="killuser" column="killuser" />
+		<result property="killhuman" column="killhuman" />
+		<result property="killboss" column="killboss" />
+		<result property="death" column="death" />
+		<result property="comexit" column="comexit" />
+		
+	</resultMap>
+	
+	<insert id="insertUser">
+		<![CDATA[
+			INSERT INTO user 
+				( userid
+				  , userpw
+				  , nickname
+				  , email
+				  , regdate
+				  , usertype
+				  , userclass
+				  , money )
+			VALUES ( #{userid}
+				  , #{userpw}
+				  , #{nickname}
+				  , #{email}
+				  , #{regdate}
+				  , #{type}
+				  , #{userclass}
+				  , #{money} )
+		]]>
+	</insert>
+	<select id="checkUserLogin" resultMap="user">
+		<![CDATA[
+			SELECT
+				userid
+				, nickname
+				, email
+				, regdate
+				, usertype
+				, userclass
+				, money
+				, killuser
+				, killhuman
+				, killboss
+				, death
+				, comexit
+			FROM user WHERE userid=#{userid} and userpw=#{userpw}
+			]]>
+	</select>
+	
+	<update id="updateUser">
+		<![CDATA[
+			UPDATE user
+			SET userid=#{userid}
+				, userpw=#{userpw}
+				, nickname=#{nickname}
+				, email=#{email}
+				, regdate=#{regdate}
+				, usertype=#{usertype}
+				, userclass=#{userclass}
+				, money=#{money}
+				where index=#{index}
+			]]>
+	</update>
+		<update id="updateUserMoney">
+		<![CDATA[
+			UPDATE user
+			SET money=#{money}
+				where userid=#{userid}
+			]]>
+	</update>
+	
+	
+	<delete id="deleteUser">
+		<![CDATA[
+			DELETE FROM user where index=#{index}
+			]]>
+	</delete>
+	
+	<select id="selectUser" resultMap="user">
+		<![CDATA[
+			SELECT
+				userid
+				, userpw
+				, nickname
+				, email
+				, regdate
+				, userclass
+				, money
+				, killuser
+				, killhuman
+				, killboss
+				, death
+				, comexit
+			FROM user where userid=#{userid}
+			]]>
+	</select>
+	
+	<select id="selectUserList" parameterType="egovframework.user.service.UserVO" resultType="egovframework.user.service.UserVO">
+			SELECT
+								nickname
+								, userclass
+								, money
+					FROM user where money > 0 ORDER BY money DESC;
+	</select>	
+	<select id="selectUserListTotCnt" parameterType="egovframework.user.service.UserVO" resultType="int">
+			SELECT COUNT(*) totcnt
+			FROM user
+			WHERE 1=1
+			<if test="searchKeyword != null and searchKeyword != ''">
+				<if test="searchCondition == 0">AND
+					index = #{searchKeyword}
+				</if>
+				<if test="searchCondition == 1">AND
+					userid LIKE CONCAT('%',#{searchKeyword},'%')
+				</if>
+			</if>			
+	</select>
+
+</mapper>

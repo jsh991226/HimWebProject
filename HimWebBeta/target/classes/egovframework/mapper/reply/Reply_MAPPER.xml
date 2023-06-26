@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="egovframework.reply.service.impl.ReplyMapper">
+	
+
+	<resultMap id="reply" type="egovframework.reply.service.ReplyVO">
+		<result property="id" column="id" />
+		<result property="title" column="title" />
+		<result property="content" column="content" />
+		<result property="owner" column="owner" />
+		<result property="regdate" column="regdate" />
+		<result property="boardid" column="boardid" />
+		<result property="replygroup" column="replygroup" />
+	</resultMap>
+	
+	<insert id="insertReply">
+		<![CDATA[
+			INSERT INTO reply 
+				( content
+				  , owner
+				  , regdate
+				  , boardid
+				  , replygroup )
+			VALUES ( #{content}
+				  , #{owner}
+				  , #{regdate}
+				  , #{boardid}
+				  , #{replygroup} )
+		]]>
+	</insert>
+	
+	<update id="updateReply">
+		<![CDATA[
+			UPDATE reply
+			SET id=#{id}
+				, title=#{title}
+				, content=#{content}
+				, owner=#{owner}
+				, regdate=#{regdate}
+				, boardid=#{boardid}
+				, replygroup=#{replygroup}
+						WHERE id=#{id}
+				]]>
+	</update>
+	
+	<delete id="deleteReply">
+		<![CDATA[
+			DELETE FROM reply 
+						WHERE id=#{id}
+				]]>
+	</delete>
+	
+	<select id="selectReply" resultMap="reply">
+		<![CDATA[
+			SELECT
+				id
+				, title
+				, content
+				, owner
+				, regdate
+				, boardid
+				, replygroup
+			FROM reply
+						WHERE id=#{id}
+				]]>
+	</select>
+	
+	<select id="selectReplyList" parameterType="egovframework.reply.service.ReplyVO" resultType="egovframework.reply.service.ReplyVO">
+			SELECT
+								id
+								, title
+								, content
+								, owner
+								, regdate
+								, boardid
+								, replygroup
+					FROM reply
+			WHERE boardid=#{boardid}
+			
+	</select>	
+	<select id="selectReplyListTotCnt" parameterType="egovframework.reply.service.ReplyVO" resultType="int">
+			SELECT COUNT(*) totcnt
+			FROM reply
+			WHERE 1=1
+			<if test="searchKeyword != null and searchKeyword != ''">
+				<if test="searchCondition == 0">AND
+					id = #{searchKeyword}
+				</if>
+				<if test="searchCondition == 1">AND
+					title LIKE CONCAT('%',#{searchKeyword},'%')
+				</if>
+			</if>			
+	</select>
+
+</mapper>

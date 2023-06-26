@@ -1,0 +1,602 @@
+@font-face {
+    font-family: 'koverwatch';
+    src: url("../fonts/koverwatch.ttf") format('opentype');
+  }
+  
+/* 공통 */  
+
+* {
+padding: 0;
+margin: 0 auto;
+font-family: "Koverwatch";
+}
+
+img {
+vertical-align: middle;
+}   
+body {
+overflow-x: hidden;
+}
+a, li, ul, p{
+text-decoration: none;
+display: inline-block;
+list-style: none;
+}
+
+
+
+
+
+.gamedownload_wrap {
+  overflow: hidden;
+  width: 100%;
+  height: 3200px;
+}
+
+.titleBox{
+width: 400px;
+height: 400px;
+margin: 0 auto;
+text-align: center;
+color: white;
+margin-top: 200px;
+
+}
+
+
+.logobox {
+  text-align: center;
+  width: 1000px;
+  height: 100px;
+}
+
+.title_logo {
+  width: 100px;
+  height: auto;
+  margin: 0 50px;
+}
+
+.title_logo:hover {
+  opacity:0.6; 
+  text-align:justify; 
+  background-color:#ffffff; 
+  cursor: pointer;
+}
+
+
+
+.gamedownload_img{
+width: 100%;
+height: 900px;
+background-color: salmon;
+overflow: auto;
+}
+.gamedownload_logoimg{
+width: 300px;
+height: auto;
+margin-top : -60px;
+}
+
+.titlebox_title{
+  float: left;
+  width: 400px;
+  height: 80px;
+  font-size: 40px;
+}
+
+.titlebox_title2{
+  float: left;
+  width: 400px;
+  height: 80px;
+  font-size: 25px;
+}
+
+
+
+
+
+.download_button{
+  width: 100px;
+  height: 50px;
+  background-color: #6768ab;
+  line-height: 20px;
+  margin-top: 145px;
+  border-radius: 5px;
+}
+
+.download_button:hover {
+  cursor: pointer;
+  background-color: rgb(124, 58, 236);
+  transition: all 0.25s linear;
+  transform: scale(1.05);
+}
+        /* game_guide  */
+
+.game_guide{
+  width: 100%;
+  height: 400px;
+  background-color: #D2DFF0;
+  float: left;
+  display: block;
+}
+
+
+.game_guide_wrap {
+	width: 1440px;
+	height : 400px;
+	display: block;
+}
+
+.game_guide_content {
+  width: 500px;
+  height: 300px;
+  float: left;
+  margin-top: 50px; 
+  margin-left: 220px;
+  letter-spacing: 2px;
+}
+
+/* .guide_img {
+  width: 550px;
+  height: 300px;
+  background-color: blanchedalmond;
+  float: right;
+  margin-right: 250px;
+  margin-top: 50px;
+} */
+.game_guide_img{
+  width: 550px;
+  height: auto;
+  margin-top: 50px;
+}
+
+.game_guide_bigtitle{
+  width: 350px;
+  height: 50px;
+  /* background-color: rgb(173, 237, 237); */
+  font-size: 45px;
+  margin-top: 70px;
+}
+
+.game_guide_smalltitle{
+  width: 400px;
+  height: 200px;
+  /* background-color: rgb(198, 232, 123); */
+  font-size: 20px;
+  margin-left: 75px;
+  margin-top: 20px;
+}
+
+/* game_event  */
+
+.game_event {
+  width: 100%;
+  height: 470px;
+  float: left;
+  display: block;
+  color: #fff;
+  -webkit-mask-box-image: url(../images/Top_and_Bottom_Divider-e96feb1c3a.svg);
+  -webkit-mask-box-image-slice: 20 350 fill;
+  margin-bottom: -19px;
+  margin-top: -19px;
+  mask-border: url(../images/Top_and_Bottom_Divider-e96feb1c3a.svg);
+  mask-border-slice: 20 350 fill;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  z-index: 10;
+}
+
+.game_event_bg {
+  background-image: url(../images/banner5.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 450px;
+  float: left;
+  display: block;
+  color: #fff;
+  position: absolute;
+}
+
+
+.game_event_bg::before {
+  position: absolute;
+  content: "";
+  top:0px;
+  left:0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+/* .game_event_bg game_event_img {
+} */
+.game_event_img{
+  width: 550px;
+  height: 300px;
+  z-index: 100;
+  position: relative;
+}
+
+
+.game_event_wrap{
+	width : 1440px;
+	height : 470px;
+	display:block;
+	z-index : -1;
+}
+
+.game_event_content {
+  width: 500px;
+  height: 400px;
+  float: right;
+  z-index: 100;
+  position: relative;
+  margin-right : 100px;
+  margin-top : 30px;
+  letter-spacing: 1px;
+}
+
+.event_img {
+  width: 550px;
+  height: 300px;
+  background-color: blanchedalmond;
+  float: left;
+  margin-left: 250px;
+  margin-top: 70px;
+  
+}
+
+.game_event_bigtitle{
+  width: 350px;
+  height: 50px;
+  /* background-color: rgb(173, 237, 237); */
+  font-size: 45px;
+  margin-top: 70px;
+}
+
+.game_event_smalltitle{
+  width: 260px;
+  height: 100px;
+  /* background-color: rgb(198, 232, 123); */
+  font-size: 20px;
+  margin-left: 75px;
+  margin-top: 20px;
+  
+}
+
+
+.gameplay_button1{
+  width: 260px;
+  height: 50px;
+  background-color: #f06414;
+  line-height: 50px;
+  color: #fff;
+  border-radius: 2px;
+  margin-top: 50px;
+  float: left;
+  margin-left: 70px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.gameplay_button2:hover {
+  cursor: pointer;
+  background-color: rgb(226, 226, 226);
+  transition: all 0.25s linear;
+  transform: scale(1.05);
+}
+
+.gameplay_button1:hover {
+  cursor: pointer;
+  background-color: #f5a272;
+  transition: all 0.25s linear;
+  transform: scale(1.05);
+}
+
+/* game_issue */
+
+.game_issue {
+  width: 100%;
+  height: 400px;
+  display: block;
+  float: left;
+  background-color: #D2DFF0;
+  -webkit-mask-box-image: url(../images/Inverse_Top_and_Bottom_Divider-57c3fb4a1a.svg);
+  -webkit-mask-box-image-slice: 20 350 fill;
+  margin-bottom: -19px;
+  margin-top: -19px;
+  mask-border: url(../images/Inverse_Top_and_Bottom_Divider-57c3fb4a1a.svg);
+  mask-border-slice: 20 350 fill;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  z-index: 10;
+}
+
+.game_issue_wrap {
+  width: 700px;
+  height: 400px;
+  float: left;
+  margin-left: 300px;
+  margin-top: 50px;
+}
+.game_image_wrap{
+  width: 355px;
+  height: 400px;
+  margin-top: 80px;
+  margin-right : 20px;
+}
+
+.himchar_img{
+	width : 250px;
+	height : auto;
+}
+
+
+.game_issue_bigtitle{
+  width: 800px;
+  height: 100px;
+  margin-top: 60px;
+  font-size: 55px;
+  
+}
+
+.game_issue_smalltitle{
+  width: 700px;
+  height: 100px;
+  font-size: 20px;
+  color: gray;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* game_map */
+
+.game_map {
+  width: 100%;
+  height: 1200px;
+  display: block;
+  float: left;
+  background-size: cover;
+  
+}
+
+.game_map_bg{
+  width: 100%;
+  height: 1100px;
+  filter: blur(15px); 
+  z-index: -1;
+  position: absolute;
+}
+
+.game_map_title{
+  text-align: center;
+  width: 100%;
+  height: 100px;
+  z-index: 100;
+  position: relative;
+  color: white;
+}
+.game_map_icon{
+  position: sticky;
+  height: 100px;
+  width: 960px;
+  z-index: 100;
+}
+
+.game_map_img{
+  width: 600px;
+  height: 800px;
+  margin-top: 40px;
+  z-index: 100;
+}
+
+
+
+.game_big_title{
+  margin-top: 100px;
+  font-size: 70px;
+  width: 600px;
+  height: 100px;
+}
+
+.game_small_title {
+  font-size: 25px;
+  width: 600px;
+  height: 100px;
+}
+
+.game_mapicon1{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  float: left;
+  line-height: 80px;
+
+}
+
+.game_monster{
+	width:60px;
+	height : auto;
+	margin-bottom : 8px;
+}
+
+.game_monster:hover {
+  cursor: pointer;
+  transition: all 0.25s linear;
+  transform: scale(1.45);
+}
+
+
+.game_map_icon {
+  width: 600px;
+  height: 120px;
+  text-align: center;
+  float: center;
+  margin-top: 150px;
+  /* margin-left: 808px; */
+  display: flex;
+  color: #fff;
+}
+.game_map_icon:hover {
+	cursor: pointer;
+}
+
+
+.game_map_icon .game_mapcontent1:hover {
+  transition: all 0.15s linear;
+  color : black;
+}
+
+
+
+
+.game_map_bannerslide:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 5px gray;
+  transition: all 0.35s linear;
+  transform: scale(1.00);
+}
+ 
+
+
+
+.game_mapcontent1{
+  font-size: 25px;
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+}
+
+
+.prev1 {
+  cursor: pointer;
+  position: relative;
+  float: left;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  margin-left: -300px;
+}
+
+.next1 {
+  cursor: pointer;
+  position: relative;
+  float: right;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  margin-right: -300px;
+}
+
+.game_map_bannerslide {
+  width: 500px;
+  height: 500px;
+  text-align : center;
+}
+
+.game_map_banner{
+  width : 250px;
+  height: auto;
+}
+
+.game_map_banner_wrap{
+	width : 500px;
+	height : 250px;
+}
+
+.game_map_banner_wrap2{
+	width : 500px;
+	height : 250px;
+}
+
+
+
+.game_map_banner2{
+  width : 500px;
+  height: auto;
+}
+
+.prevnext_button{
+  margin-top: -160px;
+  
+}
+
+
+
+.next1 {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev1:hover, .next1:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+.dot1 {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.active, .dot1:hover {
+  background-color: #717171;
+}
+
+.game_map_slidebar{
+  width: 200px;
+  height: 100px;
+  text-align: center;
+  margin-top : 30px;
+}
+
+
+
+
+.gamemaker_name{
+	margin-top : 20px;
+	width : 300px;
+	height : 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

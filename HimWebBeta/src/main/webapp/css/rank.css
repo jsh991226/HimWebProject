@@ -1,0 +1,250 @@
+/* 공통 */
+* {
+    padding: 0;
+    margin: 0 auto;
+}
+img {
+    vertical-align: middle;
+}
+body {
+    overflow-x: hidden;	
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #ffffff;
+}
+a, li, ul, p{
+    text-decoration: none;
+    display: inline-block;
+    list-style: none;
+}
+div {
+    display: block;
+}
+
+
+.search {
+    width: 100%;
+    max-width: 1280px;
+}
+.content {
+    width: 100%;
+    max-width: 1280px;
+    height: auto;
+}
+
+.HIM2 {
+    width: 100px;
+}
+
+.rank{
+    font-size: 35px;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: top;
+    margin-top:20px;
+}
+
+
+.top_info {
+    display: block;
+    width: 1280px;
+    height: 50px;
+    line-height: 50px;
+    border: 0.2rem solid rgb(215, 226, 235);
+    color: #6768ab;
+}
+
+.side2 {
+    width: 1280px;
+    font-weight: bold;
+    font-size: 25px;
+    display: block;   
+}
+
+.side2 li {
+    margin-left: 110px;
+    float: left;
+    padding-right: 90px;   
+}
+
+.rank_info {
+    height: auto;
+}
+.rank1{
+    width: 50px;
+    height: 50px;
+}
+
+/* 랭커 */
+
+.bottom_info {  
+    width: 1280px;
+    height : auto;
+    background-color: rgb(255, 255, 255);
+    border: 0.2rem solid rgb(215, 226, 235);
+    border-top-style : none;
+    border-bottom-style : none;
+}
+.ranker{
+    width: 100%;
+    height: 120px;
+    display: inline-flex;
+    border-bottom : 0.2rem solid rgb(215, 226, 235);
+}
+.money_and_clear1 a:hover {
+    transform: scale(1.05);  
+    color: #575757;   
+}
+
+.money_and_clear1 a {
+    transition: all 0.1s linear;
+    color : black;
+}
+.money_and_clear2 a:hover {
+    transform: scale(1.05);  
+    color: #575757;   
+}
+
+.money_and_clear2  a {
+    transition: all 0.1s linear;
+    color : black;
+}
+
+.facewrap {
+   margin-top: 10px; 
+}
+
+.face {
+    width: 100px;
+    height : auto;
+    margin-left: 130px;
+    
+    float: left;   
+}
+
+.name{
+    float: right;
+    width: 300px;
+    margin-top: 40px;
+    font-weight: bold;
+    margin-left : 15px;
+}
+.user_info {
+    display: flex;
+    margin-left: 10px;
+    
+}
+.money {
+    width: 200px;
+    font-weight: bold;
+    font-size: x-large;
+    margin-left: -85px;
+    margin-top: 45px;
+}
+
+.rankAnother {
+    font-weight: bold;
+    font-size: 60px;
+    text-align: center;
+    margin-left: 75px;
+    width: 71px;
+    display: block;
+    margin-top : 20px;
+}
+
+.rankTop {
+    font-weight: bold;
+    font-size: 60px;
+    text-align: center;
+    position: absolute;
+    top : 15px;
+    margin-left: 93px;
+    text-indent: -999em;
+}
+
+.level {
+    width: 100px;
+    font-weight: bold;
+    font-size: x-large;
+    margin-left: -85px;
+    margin-top: 45px;
+}
+.party {
+    width: 100px;
+    font-weight: bold;
+    font-size: x-large;
+    margin-top: 45px;
+    margin-left: -50px;
+}
+.reg {
+    width: 300px;
+    font-weight: bold;
+    font-size: x-large;
+    margin-top: 45px;
+    margin-left: 90px;
+}
+
+
+.slide_bar {
+    float: left;
+    width: 100%;
+    margin-top: 30px;
+    padding-bottom: 180px;
+    text-align: center;
+}
+
+.slide_bar a {
+    line-height: 29px;
+    height: 28px;
+    min-width: 28px;
+    display: inline-block;
+    margin: 0 11px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.button-prev,.button-next {
+    top: 50%;
+    width: 35px;
+    height: 35px;
+    background:url('https://i.ibb.co/jHRD6th/pngwing-com.png') center center no-repeat;
+    background-size: cover;
+    text-indent: -999em;
+    vertical-align: middle;
+    display: inline-block;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.slide_bar .button-prev {transform: rotateY(180deg)}
+
+.rank45 {
+    font-weight: bold;
+    font-size: 60px;
+    text-align: center;
+    position: absolute;
+    top : 15px;
+    margin-left: 90px;
+}
+
+.rank123 {
+    font-weight: bold;
+    font-size: 60px;
+    text-align: center;
+    position: absolute;
+    top : 15px;
+    margin-left: 75px;
+    text-indent: -999em;
+}
+
+.gold {
+    margin-left: 75px;
+    display: block;
+}
+.gold2 {
+    margin-left: 75px;
+    opacity : 0;
+}
+
+.rank_wrap{
+   position: relative;
+   width: 135px;
+}

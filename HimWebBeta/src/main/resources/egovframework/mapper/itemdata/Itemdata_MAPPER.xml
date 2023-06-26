@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="egovframework.inventory.service.impl.ItemdataMapper">
+	
+
+	<resultMap id="itemdata" type="egovframework.inventory.service.ItemdataVO">
+		<result property="id" column="id" />
+		<result property="sprite" column="sprite" />
+		<result property="positionx" column="positionx" />
+		<result property="positiony" column="positiony" />
+		<result property="width" column="width" />
+		<result property="height" column="height" />
+		<result property="ispartofshape" column="ispartofshape" />
+		<result property="candrop" column="candrop" />
+		<result property="durability" column="durability" />
+		<result property="area" column="area" />
+		<result property="code" column="code" />
+		<result property="itemprefabname" column="itemprefabname" />
+		<result property="ownerid" column="ownerId" />
+	</resultMap>
+	
+	<insert id="insertItemdata">
+		<![CDATA[
+			INSERT INTO itemdata 
+				( sprite
+				  , positionx
+				  , positiony
+				  , width
+				  , height
+				  , ispartofshape
+				  , candrop
+				  , durability
+				  , area
+				  , code
+				  , itemprefabname
+				  , ownerId )
+			VALUES ( #{sprite}
+				  , #{positionx}
+				  , #{positiony}
+				  , #{width}
+				  , #{height}
+				  , #{ispartofshape}
+				  , #{candrop}
+				  , #{durability}
+				  , #{area}
+				  , #{code}
+				  , #{itemprefabname}
+				  , #{ownerid} )
+		]]>
+	</insert>
+	
+	<update id="updateItemdata">
+		<![CDATA[
+			UPDATE itemdata
+			SET sprite=#{sprite}
+				, positionx=#{positionx}
+				, positiony=#{positiony}
+				, width=#{width}
+				, height=#{height}
+				, ispartofshape=#{ispartofshape}
+				, candrop=#{candrop}
+				, durability=#{durability}
+				, area=#{area}
+				, code=#{code}
+				, itemprefabname=#{itemprefabname}
+				, ownerId=#{ownerid}
+				where id=#{id}
+			]]>
+	</update>
+	
+	<delete id="deleteItemdata">
+		<![CDATA[
+			DELETE FROM itemdata where id=#{id}
+			]]>
+	</delete>
+	
+	<select id="selectItemdata" resultMap="itemdata">
+		<![CDATA[
+			SELECT
+				id
+				, sprite
+				, positionx
+				, positiony
+				, width
+				, height
+				, ispartofshape
+				, candrop
+				, durability
+				, area
+				, code
+				, itemprefabname
+				, ownerId
+			FROM itemdata
+			]]>
+	</select>
+	
+	<select id="selectItemdataList" parameterType="egovframework.inventory.service.ItemdataVO" resultType="egovframework.inventory.service.ItemdataVO">
+			SELECT sprite FROM itemdata
+			where ownerId = #{ownerid}
+	</select>	
+	<select id="selectItemdataListTotCnt" parameterType="egovframework.inventory.service.ItemdataVO" resultType="int">
+			SELECT COUNT(*) totcnt
+			FROM itemdata
+			WHERE 1=1
+			<if test="searchKeyword != null and searchKeyword != ''">
+				<if test="searchCondition == 0">AND
+					id = #{searchKeyword}
+				</if>
+				<if test="searchCondition == 1">AND
+					sprite LIKE CONCAT('%',#{searchKeyword},'%')
+				</if>
+			</if>			
+	</select>
+
+</mapper>

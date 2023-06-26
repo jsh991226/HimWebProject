@@ -1,0 +1,142 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+
+
+/* 공통 */
+* {
+    padding: 0;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #ffffff;
+}
+
+.space {
+    clear: both;
+}
+
+.inner {
+    width: 1280px;
+    margin: 0 auto;
+    height: 300px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+div {
+    display: block;
+}
+
+
+
+.rank{
+    font-size: 35px;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: top;
+    margin-top:20px;
+}
+
+.wrap {
+    width: 300px;
+    display: block;
+    height: auto;
+}
+
+.top_info {
+    background-color: rgb(255, 182, 145);
+    display: block;
+    width: 1280px;
+    height: 50px;
+    line-height: 50px;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+
+.title {
+    float: left;
+    margin-left: 250px;
+}
+.user {
+    float: left;
+    margin-left: 550px;
+}
+.reg {
+    margin-left: 1100px;
+}
+
+.rank_info {
+    height: 600px;
+}
+.rank1{
+    width: 50px;
+    height: 50px;
+}
+
+/* 랭커 */
+
+.bottom_info {  
+    width: 1280px;
+    height: 730px;
+    background-color: rgb(255, 255, 255);
+}
+
+
+
+.slide_bar {
+    float: left;
+    width: 100%;
+    margin-top: -30px;
+    padding-bottom: 180px;
+    text-align: center;
+}
+
+.slide_bar a {
+    line-height: 29px;
+    height: 28px;
+    min-width: 28px;
+    display: inline-block;
+    margin: 0 11px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.button-prev,.button-next {
+    top: 50%;
+    width: 35px;
+    height: 35px;
+    background:url('https://i.ibb.co/jHRD6th/pngwing-com.png') center center no-repeat;
+    background-size: cover;
+    text-indent: -999em;
+    vertical-align: middle;
+    display: inline-block;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+.slide_bar .button-prev {transform: rotateY(180deg)}
+
+.post1{
+    width: 100%;
+    height: 62px;
+    display: inline-flex;
+    font-weight: bold;
+    font-size: large;
+    line-height: 60px;
+    border-bottom: 1px solid rgb(236, 236, 236);
+}
+
+.post_title {
+    margin-left: 180px;
+}
+.post_name {
+    margin-left: 400px;
+}

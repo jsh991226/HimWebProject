@@ -1,0 +1,111 @@
+/* 공통 */
+* {
+    padding: 0;
+    margin: 0 auto;
+}
+img {
+    vertical-align: middle;
+}
+body {
+    overflow-x: hidden;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #ffffff;
+}
+a, li, ul, p{
+    text-decoration: none;
+    display: inline-block;
+    list-style: none;
+}
+div {
+    display: block;
+}
+
+/* Header */
+header {
+    background-color: #6768ab;
+    height: 100px;
+    box-shadow: 1.5px 1.5px 1.5px 1.5px gray;
+}
+.head {
+    color: #fff;
+    width: 100%;
+    max-width: 1320px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 165px;
+    height: auto;
+    margin-top: 15px;
+    display: hidden;
+    float: left;
+}
+
+.logo:hover{
+   cursor:pointer;
+}
+
+.nav{
+    width: 100%;
+    max-width: 1000px;
+    height: 100px;
+    display: block;
+    float: left;
+}
+.menu_list {
+    display: flex;
+    line-height: 100px;
+    font-size: large;
+    font-weight: bold;
+    color: white;
+    width: 700px;
+    height: 100px;
+    margin-left: 200px;
+    transition: all ease 0.5s 0s;
+}
+.menu_list > li:hover{
+   cursor:pointer;
+   color: #d3d3d3;
+}
+.logout img{
+    width: 50px;
+    height: auto;
+    display: hidden;
+    float: right;
+}
+
+.right-con{
+    width: 200px;
+    height: auto;
+    margin-top: 30px;
+    margin-right: 50px;
+}
+
+.login img {
+    width: 50px;
+    height: auto;
+    display: hidden;
+    float: right;
+}
+.login:hover {
+   cursor:pointer;
+}
+
+.login_out login img {
+  filter: grayscale(100%);
+  transition: .3s ease-in-out;
+}
+.login_out login : hover img {
+  filter: grayscale(0);
+}
+
+.login_out logout img {
+  filter: grayscale(100%);
+  transition: .3s ease-in-out;
+}
+.login_out logout : hover img {
+  filter: grayscale(0);
+}
+
+

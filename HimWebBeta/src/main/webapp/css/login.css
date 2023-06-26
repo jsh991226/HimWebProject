@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?gamily=Noto+Sans+KR&display=swap');
+
+
+.top{
+    font-weight: bold;
+    height: 10vh;
+    
+}
+
+.login-form{
+    position: relative; z-index: 2;
+    width : 600px;
+    height : 350px;
+    margin-top : 100px;
+}
+a{
+    text-decoration : none;
+}
+.login-form h1{
+    font-size: 32px; color: rgb(53, 171, 255);
+    text-align: center;
+}
+.int-area {
+    width: 400px; position: relative;
+    margin-top: 20px;
+}
+.login-form>h1 {
+    font-size: 55px;
+}
+
+.int-area input{
+    width: 100%;
+    padding: 20px 10px 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    font-size: 18px; color: rgb(0, 0, 0);
+    outline:none;
+}
+.int-area label {
+    position:absolute; left: 10px; top:15px;
+    font-size: 18px; color: rgb(0, 0, 0);
+    transition: all .5s ease;
+}
+.int-area input:focus + label,
+.int-area input:valid + label {
+    top:0;
+    font-size: 13px; color:#166cea;
+}
+.btn-area{
+    margin-top: 30px;
+} 
+.btn-area.inAuth button.inAuth{
+    width: 75%;
+    height: 50px;
+    background: #6768ab;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 25px;
+    margin-top: 50px;
+    margin-left: 85px;
+    transition: all .5s ease;
+}
+
+.btn-area.inAuth button.inAuth:hover{
+	color: #d3d3d3;
+	cursor: pointer;
+	
+}
+#joinText{
+	width: 20%;
+	font-size: 20px;
+	text-align:center;
+	margin-left: 40%;
+	
+}
+#joinText:hover{
+	font-weight:bold;
+	color: gray;
+	cursor:pointer
+}

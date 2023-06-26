@@ -1,0 +1,511 @@
+@font-face {
+    font-family: "koverwatch";
+    src: url('./font/koverwatch.woff') format('woff');
+}
+
+/* @media (max-width: 600px) {
+   .footer {
+   display : none;
+   }
+}    */
+
+@media screen and (max-width: 600px) {
+  .freeboard > div {
+    width: 80%;
+  }
+}
+
+
+
+/* 공통 */
+* {
+    padding: 0;
+    margin: 0 auto;
+}
+img {
+    vertical-align: middle;
+}
+body {
+    overflow-x: hidden;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #ffffff;
+}
+a, li, ul, p{
+    text-decoration: none;
+    display: inline-block;
+    list-style: none;
+}
+div {
+    display: block;
+}
+
+/* Header */
+header {
+    background-color: #6768ab;
+    height: 100px;
+    box-shadow: 1.5px 1.5px 1.5px 1.5px gray;
+}
+.header {
+    color: #fff;
+    width: 100%;
+    max-width: 1320px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 165px;
+    height: auto;
+    margin-top: 15px;
+    display: hidden;
+    float: left;
+}
+.nav{
+    width: 100%;
+    max-width: 1000px;
+    height: 100px;
+    display: block;
+    float: left;
+}
+.menu_list {
+    display: flex;
+    line-height: 100px;
+    font-size: large;
+    font-weight: bold;
+    color: white;
+    width: 700px;
+    height: 100px;
+    margin-left: 200px;
+}
+
+/* CONTENT */
+.content {
+    width: 100%;
+    height: 1500px;
+}
+
+.bannerimg {
+    max-width: 1600px;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+.banner {
+    max-width: 1280px;
+    position: relative;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 20px;
+    
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+  }
+  
+ 
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+/* 자유게시판 부분 */
+
+.freeboard_title_wrap{
+   width:100%;
+   max-width : 1280px;
+   display:block;
+   height : auto;
+   max-height : 500px;
+   float : left;
+   margin-top : 50px;
+   background-color: #f7f7f7;
+}
+.freeboard_title1 {
+    width : 320px;
+    height: 25px;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+}
+.freeboard_title2 {
+   height : 25px;
+   width:100%;
+   max-width : 320px;
+    font-size: 50px;
+    font-weight: bold;
+    float : right;
+    margin-top : -40px;
+    text-align : right;
+}
+.freeboard_title2 a:hover {
+    transform: scale(1.05);  
+    color: #575757;   
+}
+
+.freeboard_title2 a {
+    transition: all 0.1s linear;
+    color : black;
+}
+
+.boardbutton a:hover {
+    transform: scale(1.05);  
+    color: #575757;   
+}
+
+.boardbutton a {
+    transition: all 0.1s linear;
+    color : black;
+}
+
+.boardbutton {
+   float:right;
+   margin-right : 30px;
+}
+
+
+
+.boardbutton2 a:hover {
+    transform: scale(1.05);  
+    color: #575757;   
+}
+
+.boardbutton2 a {
+    transition: all 0.1s linear;
+    color : black;
+}
+
+.boardbutton2 {
+   float:right;
+   margin-right : 30px;
+}
+
+
+.freeboard_wrap {
+    width: 100%;
+    /* background-color: #f1f0f0; */
+    height: 500px;
+    
+}
+
+.freeboard > *{
+    flex-grow: 0;
+}
+.freeboard {
+	width:100%;
+    max-width: 1400px;
+    height: 450px;
+    display:flex;
+    background-color : #f7f7f7;
+    flex-wrap : wrap;
+    gap : 1em;
+    align-items: center;
+    overflow:hidden;
+}
+
+
+.freeboard1 {
+    width: 220px;
+    height: 360px;
+    flex-basis: 200px;
+    background-color: #fff;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px #d3d3d3;
+    transition: all ease 0.5s 0s;
+    /* flex-grow : 0.5; */
+    
+}
+.freeboard1:hover{
+    box-shadow: 3px 3px 3px 3px #d3d3d3;
+    cursor: pointer;
+}
+
+.board_content {
+    width: 220px;
+    height: 220px;
+}
+.userimg {
+       
+    width: 100%;
+    height: auto;
+    
+}
+.board_writing{
+    width: 220px;
+    height: 80px;
+    text-align: center;
+    font-size: medium;
+    font-weight: bold;
+}
+.writing_content1 {
+    width: 220px;
+    margin-top: 18px;
+    color: red;
+}
+
+.user_info {
+    width: 220px;
+    height: 50px;
+    border-radius: 0 0 10px 10px;
+    border-top: 1px dotted gray;
+    display: flex;   
+    line-height: 50px; 
+}
+.user_img {
+    width: 50px;
+    height: 45px;
+    margin-top: 8px;
+    margin-left: 10px;
+}
+.info_name {
+    font-size: medium;
+    font-weight: bold;
+    margin-left: 70px; 
+}
+
+
+.freenotice {
+    width: 100%;
+    /* height: 500px; */
+    height : auto;
+    max-width: 1280px;
+}
+/* 랭킹 기록 부분 */
+.rankinglist {
+    width: 100%;
+    max-width: 530px;
+    /* height: 435px; */
+    height : auto;
+    background-color: rgb(255, 255, 255);
+    margin-top: 30px;
+    float: left;
+    border-radius: 5px;
+}
+
+.top_info {
+    width: 530px;
+    height: 40px;
+    display: flex;
+    line-height: 40px;
+    border: 0.0625rem solid rgb(215, 226, 235);
+    color: #6768ab;
+}
+.rank {
+    width: 120px;
+    margin-left: 30px;
+}
+.name {
+    width: 250px;
+}
+.reg {
+    width: 160px;   
+}
+.rank_info1 {
+    width: 530px;
+    height: 77px;
+    display: flex;
+    border: 0.0625rem solid rgb(215, 226, 235);
+}
+.rankimg {
+    width: 100%;
+    max-width: 40px;
+    margin-left: 10px;
+    height: auto;
+}
+.rankimg4 {
+    width: 100%;
+    max-width: 60px;
+    height: 70px;
+    opacity: 0;
+}
+
+.rank_name{
+    float: right;
+    width: 100%;
+    max-width: 150px;
+    height: 76px;
+    margin-top: 15px;
+    margin-right: 50px;
+}
+.rank_type {
+    color: rgb(120, 144, 160);
+    font-size: 1rem;
+}
+.rank_reg{
+    font-weight: bold;
+    font-size: 20px;
+    width: 100%;
+    max-width: 160px;
+    margin-left: 10px;
+    line-height: 77px;
+    height: 77px;
+}
+.rank_wrap {
+    position: relative;
+    width: 60px;
+    margin-left: 15px;
+}
+.rank123{
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: -40px;
+    position: absolute;
+    text-indent: -999em;
+}
+.rank45{
+    font-weight: bold;
+    font-size: 30px;
+    position: absolute;
+    margin-left: -40px;
+    top: 15px;
+}
+
+
+/* 공지사항 부분 */
+.noticeboard {
+    width: 100%;
+    max-width: 620px;
+    height: 420px;
+    margin-top: 30px;
+    float: right;
+    border-radius: 15px;
+}
+.notice_title {
+    width: 620px;
+    float: left;
+    font-size: 30px;
+    font-weight: bold;
+    height: 30px;
+}
+.noticelist {
+    width: 620px;
+    position: absolute;
+    margin-top: 60px;
+    height : 380px;
+    lint-height : 380px;
+}
+.notice {
+    line-height : 80px;
+    font-weight: bold;
+    height: 80px;
+    display: flex;
+    border-bottom: 1px dotted black;
+    width: 620px
+}
+.notice:hover{
+	cursor:pointer;
+}
+
+
+.noticecontent {
+    margin-left: 10px;
+    background-color: #6768ab;
+    border-radius: 20px;
+    line-height: 30px;
+    margin-top : 25px;
+    height: 30px;
+    width: 80px;
+    text-align: center;
+    color: white;
+}
+.noticecontent2 {
+    margin-left: -250px;
+    font-size: small;
+    width: 200px;
+    height : 30px;
+    line-height: 80px;
+}
+.board_button {
+    width : 30px;
+    height : auto;
+}
+
+
+/* footer */
+
+.footer_wrap {
+    width: 100%;
+    background-color: #6768ab;
+    height: 200px;
+}
+.footer {
+    width: 1280px;
+    height: 200px;
+    margin-top: 100px;
+}
+.footer_info {
+    float: left;
+    margin-top: 46px;
+    width: 900px;
+}
+.footer_info ul {
+    float: left;
+}
+.footer_info ul li:first-child {
+    padding-left: 0px;
+    background: none;
+}
+.footer_info ul li {
+    float: left;
+    padding: 0 13px;
+    font-size: 16px;
+    color: white;
+    border-right: 1px solid gray;
+}
+.footer_info p {
+    float: left;
+    line-height: 1.5;
+    margin-top: 21px;
+    font-size: 14px;
+    color: white;
+}
+
+.copyright {
+    float: left;
+    width: 100%;
+    margin-top: 3px;
+    font-size: 11px;
+    color: white;
+}
+
+.footer_logo {
+    display: block;
+    float: right;
+    margin-top: 50px;
+    margin-right: 50px;
+    width: 300px;
+    height: auto;
+}
+.logoimg {
+    width: 165px;
+    height: 100px;
+    float: right;
+}

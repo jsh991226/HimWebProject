@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="egovframework.itemdata.service.impl.PostitemMapper">
+	
+
+	<resultMap id="postitem" type="egovframework.itemdata.service.PostitemVO">
+		<result property="id" column="id" />
+		<result property="ownerid" column="OwnerID" />
+		<result property="itemdataname" column="ItemDataName" />
+		<result property="vaild" column="vaild" />
+	</resultMap>
+	
+	<insert id="insertPostitem">
+		<![CDATA[
+			INSERT INTO postitem 
+				( OwnerID
+				  , ItemDataName
+				  , vaild )
+			VALUES ( #{ownerid}
+				  , #{itemdataname}
+				  , #{vaild} )
+		]]>
+	</insert>
+	
+	<update id="updatePostitem">
+		<![CDATA[
+			UPDATE postitem
+			SET vaild="0" where OwnerID=#{ownerid}
+			]]>
+	</update>
+	
+	<delete id="deletePostitem">
+		<![CDATA[
+			DELETE FROM postitem 
+			]]>
+	</delete>
+	
+	<select id="selectPostitem" resultMap="postitem">
+		<![CDATA[
+			SELECT
+				OwnerID
+				, ItemDataName
+				, vaild
+			FROM postitem id=#{id}
+			]]>
+	</select>
+	
+	<select id="selectPostitemList" parameterType="egovframework.itemdata.service.PostitemVO" resultType="egovframework.itemdata.service.PostitemVO">
+			SELECT
+								id
+								, OwnerID
+								, ItemDataName
+								, vaild
+					FROM postitem
+			WHERE vaild="1" and OwnerID=#{ownerid}
+	</select>	
+		<select id="selectPostitemListAll" parameterType="egovframework.itemdata.service.PostitemVO" resultType="egovframework.itemdata.service.PostitemVO">
+			SELECT
+								id
+								, OwnerID
+								, ItemDataName
+								, vaild
+					FROM postitem
+			WHERE OwnerID=#{ownerid}
+	</select>	
+	
+	<select id="selectPostitemListTotCnt" parameterType="egovframework.itemdata.service.PostitemVO" resultType="int">
+			SELECT COUNT(*) totcnt
+			FROM postitem
+			WHERE 1=1
+			<if test="searchKeyword != null and searchKeyword != ''">
+				<if test="searchCondition == 0">AND
+					id = #{searchKeyword}
+				</if>
+				<if test="searchCondition == 1">AND
+					OwnerID LIKE CONCAT('%',#{searchKeyword},'%')
+				</if>
+			</if>			
+	</select>
+
+</mapper>
