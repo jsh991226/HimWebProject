@@ -18,4 +18,4 @@
 
 
 ![image](https://github.com/jsh991226/HimWebProject/assets/81565737/1390da56-6f96-4305-ace1-5b8e9cdd5bcb)
-![image](https://github.com/jsh991226/HimWebProject/assets/81565737/2d50c85e-4998-436b-8302-52a16b0367c4)
+![image](https://github.com/jsh991226/HimWebProject/assets/81565737/2c8fbbbd-7d97-46d8-8e0e-7d30caeebf69)
