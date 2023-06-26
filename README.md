@@ -29,7 +29,9 @@
 <img width="500" alt="image" src="https://github.com/jsh991226/HimWebProject/assets/81565737/3c8d197c-1ae0-4643-b100-132ff6760131">
 
 ##### 웹 상점(구매시 게임 클라이언트에서 확인 가능)
-       클라이언트 관련은 [ProjectHIM](https://github.com/jsh991226/ProjectHIM) 을 참고해주세요
+       클라이언트 관련은  을 참고해주세요
+
+       [ProjectHIM](https://github.com/jsh991226/ProjectHIM)
 <img width="500" alt="image" src="https://github.com/jsh991226/HimWebProject/assets/81565737/c43a1c24-3fc3-4b26-8437-3e3a18b3e7f1">
 <img width="500" alt="image" src="https://github.com/jsh991226/HimWebProject/assets/81565737/f8e84b91-8f53-4f2e-a6ed-7a54f15b23e5">
 
