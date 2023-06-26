@@ -14,8 +14,23 @@
 ##### 충분한 환경에서 실행을 해보시려면 디스코드로 연락주시면 감사하겠습니다
 ##### 팀장 : 주승환#8118
 
+### Use Tech
+##### 전자정부프레임워크, Spring, Java, HTML5, CSS, Javascript, JQuery, MySQL, AWS EC2
+
 ## Web System INFO
 
-
+##### 전체 메인 페이지
 ![image](https://github.com/jsh991226/HimWebProject/assets/81565737/1390da56-6f96-4305-ace1-5b8e9cdd5bcb)
 ![image](https://github.com/jsh991226/HimWebProject/assets/81565737/2c8fbbbd-7d97-46d8-8e0e-7d30caeebf69)
+
+##### 로그인/회원가입 Modal
+<img width="500" alt="image" src="https://github.com/jsh991226/HimWebProject/assets/81565737/49cf6d2f-aa01-46af-8553-8b1536b531f2">
+<img width="500" alt="image" src="https://github.com/jsh991226/HimWebProject/assets/81565737/3c8d197c-1ae0-4643-b100-132ff6760131">
+
+##### 웹 상점(구매시 게임 클라이언트에서 확인 가능)
+       클라이언트 관련은 ProjectHIM 을 참고해주세요
+<img width="500" alt="image" src="https://github.com/jsh991226/HimWebProject/assets/81565737/c43a1c24-3fc3-4b26-8437-3e3a18b3e7f1">
+<img width="500" alt="image" src="https://github.com/jsh991226/HimWebProject/assets/81565737/f8e84b91-8f53-4f2e-a6ed-7a54f15b23e5">
+
+##### 웹 마이페이지(인게임 인벤토리 및 다양한 정보 확인 가능)
+![image](https://github.com/jsh991226/HimWebProject/assets/81565737/fdf043aa-c5be-4d1f-97c9-949a71d1c6e4)
